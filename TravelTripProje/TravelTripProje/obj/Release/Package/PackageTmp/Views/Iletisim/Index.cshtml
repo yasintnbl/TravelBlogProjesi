@@ -1,0 +1,52 @@
+﻿@model TravelTripProje.Models.Siniflar.İletisim
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+
+}
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Free Easy-Trip Website Template | Contact :: w3layouts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+
+    <div class="contact">
+        <div class="wrap">
+            <div class="contact-top">
+                <h3>Bana Ulaşın</h3>
+                <p> İletişim Bilgilerinizi Yazınız. Biz Size Konu Hakkında Dönüş Yapalım.</p>
+            </div>
+            <form class="cmxform" method="post">
+                @Html.LabelFor(x => x.AdSoyad,"Ad Soyad" )
+                @Html.TextBoxFor(x => x.AdSoyad, new { @class = "form-control" })
+                <br />
+                @Html.LabelFor(x => x.Mail)
+                @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+                <br />
+                @Html.LabelFor(x => x.Konu)
+                @Html.TextBoxFor(x => x.Konu, new { @class = "form-control" })
+                <br />
+                @Html.LabelFor(x => x.Mesaj)
+                @Html.TextAreaFor(x => x.Mesaj, 10, 1, new { @class = "form-control" })
+                <br />
+                <button class="btn btn-primary">Gönder</button>
+               
+            </form>
+            <br />
+            <div class="clear"></div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+</html>
